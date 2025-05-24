@@ -1,0 +1,52 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.navbar {
+    padding: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.search-box input {
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.search-box input:focus {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav-tabs,
+.nav-pills {
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-tabs .nav-link,
+.nav-pills .nav-link {
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-pills .nav-link:hover {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 15px;
+}

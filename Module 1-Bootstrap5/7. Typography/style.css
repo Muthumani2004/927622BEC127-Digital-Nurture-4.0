@@ -1,0 +1,21 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    padding: 20px;
+}
+
+.bg-light {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.text-center {
+    font-weight: bold;
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+}

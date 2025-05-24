@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.accordion-button {
+    background-color: #ff5733;
+    color: white;
+    font-weight: bold;
+}
+
+.accordion-button .icon {
+    font-size: 1.2em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.accordion-button:not(.collapsed) .icon {
+    transform: rotate(180deg);
+}

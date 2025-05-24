@@ -1,0 +1,6 @@
+@import "variables";
+
+.custom-border {
+    border: 2px solid $primary;
+    border-radius: $border-radius;
+}

@@ -1,0 +1,56 @@
+@use "variables";
+
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Border Styling */
+.custom-border {
+    border: 3px solid $primary;
+    border-radius: $border-radius;
+    padding: 15px;
+    font-weight: bold;
+}
+
+/* Interactive Button */
+.custom-button {
+    background: $primary;
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: $border-radius;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background: darken($primary, 10%);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Modern Card */
+.custom-card {
+    background: white;
+    border-radius: $border-radius;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Stylish Gradient Background */
+.gradient-bg {
+    background: linear-gradient(45deg, $gradient-start, $gradient-end);
+    padding: 30px;
+    border-radius: $border-radius;
+    color: white;
+}

@@ -1,0 +1,12 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    padding: 20px;
+}
+
+.btn-primary {
+    border-radius: 8px;
+    font-weight: bold;
+}

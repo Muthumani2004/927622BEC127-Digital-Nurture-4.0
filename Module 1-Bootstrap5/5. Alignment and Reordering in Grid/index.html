@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Grid Alignment & Reordering - Created by MUTHUMANI P.</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">MUTHUMANI P.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Centered Column -->
+    <div class="container mt-5">
+        <div class="row justify-content-center align-items-center" style="height: 200px;">
+            <div class="col-md-4 text-center p-4 bg-primary text-white rounded shadow-lg">
+                <h5>Centered Column</h5>
+                <p>Perfectly aligned using Bootstrap's flex utilities.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reordered Columns -->
+    <div class="container mt-4">
+        <div class="row g-3">
+            <div class="col-md-4 order-md-2">
+                <div class="p-4 bg-success text-white rounded shadow-lg text-center">
+                    <h5>Column 1</h5>
+                    <p>Reordered on medium screens.</p>
+                </div>
+            </div>
+            <div class="col-md-4 order-md-1">
+                <div class="p-4 bg-danger text-white rounded shadow-lg text-center">
+                    <h5>Column 2</h5>
+                    <p>Reordered on medium screens.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-warning text-white rounded shadow-lg text-center">
+                    <h5>Column 3</h5>
+                    <p>Maintains default order.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="text-center mt-4 text-muted">Created by MUTHUMANI P.</p>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

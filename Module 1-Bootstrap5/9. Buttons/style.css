@@ -1,0 +1,26 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 600px;
+}
+
+.btn {
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+.btn-group {
+    margin-top: 10px;
+}
+
+.shadow-sm,
+.shadow-lg {
+    transition: transform 0.2s ease-in-out;
+}
+
+.shadow-sm:hover,
+.shadow-lg:hover {
+    transform: scale(1.05);
+}

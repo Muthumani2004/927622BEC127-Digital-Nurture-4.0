@@ -1,0 +1,62 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Headings */
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 15px;
+}
+
+/* Responsive Box */
+.bg-primary {
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.bg-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Pricing Cards */
+.pricing-card {
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Bootstrap Utilities */
+.shadow {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-lg {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.rounded {
+    border-radius: 10px;
+}

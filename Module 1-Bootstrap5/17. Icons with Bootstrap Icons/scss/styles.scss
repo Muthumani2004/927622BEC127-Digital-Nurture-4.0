@@ -1,0 +1,26 @@
+@use "variables";
+
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Footer Icons */
+footer a {
+    font-size: 24px;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+        color: lighten($primary, 15%);
+        transform: scale(1.2);
+    }
+}
+
+/* Icon Buttons */
+.btn i {
+    font-size: 24px;
+}

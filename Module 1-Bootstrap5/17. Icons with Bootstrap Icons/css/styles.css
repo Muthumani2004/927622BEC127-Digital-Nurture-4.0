@@ -1,0 +1,21 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+footer a {
+    font-size: 24px;
+    transition: 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #007bff; /* Replace with your desired hover color */
+    transform: scale(1.2);
+}
+
+.btn i {
+    font-size: 24px;
+}
