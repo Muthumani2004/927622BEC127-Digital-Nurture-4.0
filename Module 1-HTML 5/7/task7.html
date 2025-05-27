@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Promo Video</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 640px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007BFF;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function () {
+            const video = document.getElementById('promoVideo');
+            const message = document.getElementById('videoMessage');
+
+            video.oncanplay = function () {
+                message.textContent = "🎬 Video is ready to play!";
+                message.style.color = "#28a745";
+            };
+
+            window.onbeforeunload = function (event) {
+                event.preventDefault();
+                event.returnValue = "You have unsaved changes. Are you sure you want to leave?";
+            };
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Event Promo Video</h1>
+        <video id="promoVideo" controls>
+            <source src="promo-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p id="videoMessage"></p>
+    </div>
+
+</body>
+
+</html>

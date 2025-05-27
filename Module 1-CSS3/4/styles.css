@@ -1,0 +1,41 @@
+body {
+  color: #333;
+  background: url('background-img.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #817c7c;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+header {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: #fff;
+  padding: 25px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: bold;
+  border-bottom: 3px solid #d66;
+}
+
+.initiative,
+.events {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  background: linear-gradient(to right, #007BFF, #00C6FF);
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+p {
+  font-size: 1.2em;
+  color: #444;
+}

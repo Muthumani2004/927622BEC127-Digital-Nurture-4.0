@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 30px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.eventCard {
+    border: 2px solid #000;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.selectedField {
+    outline: 3px solid #007BFF;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.styled-form {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hiddenElement {
+    visibility: hidden;
+}
+
+.noneElement {
+    display: none;
+}

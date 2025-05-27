@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugging Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 20px auto;
+            transition: all 0.3s ease-in-out;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .box:hover {
+            background-color: coral;
+        }
+
+        .log {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #28a745;
+            font-size: 1.2em;
+        }
+    </style>
+    <script>
+        console.log("Debugging started...");
+
+        function handleClick() {
+            console.log("Box clicked!");
+            const box = document.querySelector(".box");
+            box.style.width = "250px";
+
+            // Debugging friendly error handling
+            let message = document.getElementById("nonExistent");
+            if (message) {
+                message.innerText = "This element exists!";
+            } else {
+                console.warn("Element with ID 'nonExistent' was not found.");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Debugging with Chrome DevTools</h2>
+        <p>Click the box to trigger JavaScript events.</p>
+
+        <div class="box" onclick="handleClick()">Click Me!</div>
+
+        <p class="log">Check the console for debugging logs.</p>
+    </div>
+
+</body>
+
+</html>

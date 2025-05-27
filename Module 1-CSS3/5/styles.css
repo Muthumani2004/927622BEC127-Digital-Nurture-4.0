@@ -1,0 +1,53 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 30px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 8px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.header p {
+    font-size: 1.3em;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.content {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.content ul {
+    font-size: 1.2em;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    line-height: 2;
+    list-style-type: square;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Event Registration</h1>
+    <div id="event-container">
+        <h2 id="event-name"></h2>
+        <p><strong>Date:</strong> <span id="event-date"></span></p>
+        <p><strong>Available Seats:</strong> <span id="available-seats"></span></p>
+        <input type="number" id="seats-requested" placeholder="Seats to book" min="1">
+        <button onclick="bookSeats()">Book Now</button>
+        <p id="status-message"></p>
+        <button onclick="viewEventDetails()">View Event Details</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation for Event Mapping</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease-in-out;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #location {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #28a745;
+            font-size: 1.2em;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const findEventsBtn = document.getElementById("findEvents");
+            const locationDisplay = document.getElementById("location");
+
+            findEventsBtn.addEventListener("click", () => {
+                if ("geolocation" in navigator) {
+                    navigator.geolocation.getCurrentPosition(
+                        (position) => {
+                            const latitude = position.coords.latitude;
+                            const longitude = position.coords.longitude;
+                            locationDisplay.textContent = `📍 Latitude: ${latitude}, Longitude: ${longitude}`;
+                        },
+                        (error) => {
+                            switch (error.code) {
+                                case error.PERMISSION_DENIED:
+                                    locationDisplay.textContent = "🚫 Permission denied. Please allow location access.";
+                                    break;
+                                case error.POSITION_UNAVAILABLE:
+                                    locationDisplay.textContent = "❌ Location information is unavailable.";
+                                    break;
+                                case error.TIMEOUT:
+                                    locationDisplay.textContent = "⏳ Location request timed out. Try again.";
+                                    break;
+                                default:
+                                    locationDisplay.textContent = "⚠️ An unknown error occurred.";
+                            }
+                        },
+                        { enableHighAccuracy: true, timeout: 5000 }
+                    );
+                } else {
+                    locationDisplay.textContent = "❗ Geolocation is not supported by your browser.";
+                }
+            });
+
+            window.onbeforeunload = function (event) {
+                event.preventDefault();
+                event.returnValue = "You may lose unsaved data. Are you sure you want to leave?";
+            };
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Find Nearby Events</h2>
+        <button id="findEvents">Find Nearby Events</button>
+        <p id="location"></p>
+    </div>
+
+</body>
+
+</html>

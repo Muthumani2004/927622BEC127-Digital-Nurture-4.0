@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save User Preferences</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            font-size: 1em;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease-in-out;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #statusMessage {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #28a745;
+            font-size: 1.2em;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const eventTypeSelect = document.getElementById('eventType');
+            const clearPreferencesBtn = document.getElementById('clearPreferences');
+            const statusMessage = document.getElementById('statusMessage');
+
+            // Load saved preferences on page load
+            const savedEventType = localStorage.getItem('preferredEventType');
+            if (savedEventType) {
+                eventTypeSelect.value = savedEventType;
+                statusMessage.textContent = `Your preference (${savedEventType}) is pre-selected.`;
+            }
+
+            // Save selected event type in localStorage
+            eventTypeSelect.addEventListener('change', function () {
+                localStorage.setItem('preferredEventType', this.value);
+                statusMessage.textContent = `Preference saved: ${this.value}`;
+            });
+
+            // Clear localStorage and sessionStorage
+            clearPreferencesBtn.addEventListener('click', function () {
+                localStorage.clear();
+                sessionStorage.clear();
+                eventTypeSelect.value = "";
+                statusMessage.textContent = "Preferences cleared.";
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Save Your Event Preferences</h2>
+        <label for="eventType">Select Event Type:</label>
+        <select id="eventType">
+            <option value="" disabled selected>Select an event</option>
+            <option value="conference">Conference</option>
+            <option value="webinar">Webinar</option>
+            <option value="workshop">Workshop</option>
+        </select>
+        <button id="clearPreferences">Clear Preferences</button>
+        <p id="statusMessage"></p>
+    </div>
+
+</body>
+
+</html>
